@@ -1,0 +1,69 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> Sublime-Text3 · VincentQi</title><meta name="description" content="
+不知道哪一天在网上看到有人评测Sublime-text，说绝对是开发神器，不是nodepad++等所比拟的（可能有人会说这个有待商议），所以我就去试了一下（本来只是简单的编码，还是菜鸟=.=也谈不上有多少深入），期间也已经用了很长一段时间了也没打算写什么，最近正好想用markdown写点东西，乘此机会写个这个权当熟悉一下markdown的语法。
+
+
+安装Sublime-Text3官网有Sublime-Text3和Sublime-Text2，选择ST3下载，Sublime-Text3
+安装好Sublime-Text3后还需要安装Package-Control一个必备的包管理，以后用来安装其他插件，安装步骤:
+
+1.打开ST，点击菜单View-&amp;gt;Show Console在底部的命令行下输入如下代码并等待安装完成
+&lt;figure cla"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="stylesheet" href="http://fonts.useso.com/css?family=Source+Sans+Pro:400,600" type="text/css"></head><body><header><a href="/" class="logo-link"><img src="/favicon.png"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">博客</a></li><li class="nav-list-item"><a href="http://weibo.com/sunchongsheng" target="_blank" class="nav-list-link">微博</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li><li class="nav-list-item"><a href="https://github.com/pinggod" target="_blank" class="nav-list-link">GITHUB</a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h2 class="post-title"><a href="/2015/11/15/jc-sublimetext3/" class="post-title-link">Sublime-Text3</a></h2><div class="post-meta"><div class="post-time">Nov 15, 2015</div></div><div class="post-content"><blockquote>
+<p>不知道哪一天在网上看到有人评测Sublime-text，说绝对是开发神器，不是nodepad++等所比拟的（可能有人会说这个有待商议），所以我就去试了一下（本来只是简单的编码，还是菜鸟=.=也谈不上有多少深入），期间也已经用了很长一段时间了也没打算写什么，最近正好想用markdown写点东西，乘此机会写个这个权当熟悉一下markdown的语法。</p>
+</blockquote>
+<a id="more"></a>
+<h2 id="安装Sublime-Text3">安装Sublime-Text3</h2><p>官网有Sublime-Text3和Sublime-Text2，选择ST3下载，<a href="http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%20Build%203083.zip" target="_blank" rel="external">Sublime-Text3</a></p>
+<p>安装好Sublime-Text3后还需要安装Package-Control一个必备的包管理，以后用来安装其他插件，安装步骤:</p>
+<ul>
+<li><p>1.打开ST，点击菜单View-&gt;Show Console<br>在底部的命令行下输入如下代码并等待安装完成</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import urllib.request,os,hashlib; h = <span class="string">'eb2297e1a458f27d836c04bb0cbaf282'</span> + <span class="string">'d0e7a3098092775ccb37ca9d6b2e4b7d'</span>; pf = <span class="string">'Package Control.sublime-package'</span>; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( <span class="string">'http://packagecontrol.io/'</span> + pf.replace(<span class="string">' '</span>, <span class="string">'%20'</span>)).read(); dh = hashlib.sha256(by).hexdigest(); <span class="built_in">print</span>(<span class="string">'Error validating download (got %s instead of %s), please try manual install'</span> % (dh, h)) <span class="keyword">if</span> dh != h <span class="keyword">else</span> open(os.path.join( ipp, pf), <span class="string">'wb'</span> ).write(by)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>2.安装完成后重启ST3，点开菜单Preference，可以看到package settings和package control则说明安装成功</p>
+</li>
+</ul>
+<h2 id="安装插件">安装插件</h2><p>经过上面的步骤我们已经成功安装了Package Control，接下来安装插件，快捷键<code>ctrl+shift+p</code>打开Package Control,在输入框里输入install，然后会有提示并选择Install Package，等待···然后又弹出一个输入框让你输入插件的名字，输入后回车等待一会儿即可完成插件安装</p>
+<h4 id="常用插件">常用插件</h4><ul>
+<li>Alignment 美化对其”=”,”`”,”；”这些符号</li>
+<li>BracketHighlight     代码块括号高亮工具，可以自定义括号颜色</li>
+<li>DocBlockr 在函数上一行输入/**然后回车，神奇的事情发生了，jsdoc就生成了</li>
+<li>Emmet 以前叫zencoding，快速编写html的一个插件</li>
+<li>HTML-CSS-JS Prettify html、css、js文件一键优化，但貌似只会优化缩进</li>
+<li>AngularJS 编写Angular时给出智能提示</li>
+<li>JQuery JQueryAPI的智能提示</li>
+<li>SublimeLinter-jshint 配合使用，支持js语法规则校验，每个js编写者必备</li>
+<li>Markdown Preview 写markdown的好搭档，用来显示预览md格式文件的效果</li>
+<li>Sidebarenhancements 侧边工具栏增加功能</li>
+</ul>
+<h2 id="使用教程">使用教程</h2><p>如果你想深入试用，并提高效率那么一些快捷键和配置是必不可少的</p>
+<h4 id="通用快捷键">通用快捷键</h4><ul>
+<li><code>ctrl_shift+p</code><blockquote>
+<p>打开Package Control，上面已经介绍过了。这里还有个技巧，此技巧在下面的各种地方都能用的上，就是ST支持模糊匹配。比如，你想找Install Package，你在 Package Control 的输入框中install，可以自动匹配到Install Package，也可以简单的输入ip，也能匹配到它，这种模糊匹配的功能很方便</p>
+</blockquote>
+</li>
+<li><code>Ctrl+P</code><blockquote>
+<p>根据文件名打开文件。比如你想打开login/func/funtion.php，你只要在输入框中输入login/func/funtion.php即可，也可以用模糊匹配，如login/function等，模糊匹配还是自己去体验吧</p>
+</blockquote>
+</li>
+<li><code>ctrl+r</code><blockquote>
+<p>查找对应的函数和方法，大家注意到了输入框中自动会有一个“@”符号，除此之后还有其他一些匹配符号，如“：”是定位到行</p>
+</blockquote>
+</li>
+<li><code>ctrl+d</code><blockquote>
+<p>多处同步编辑，如需要把user换成member只需要双击user然后<code>ctrl+d</code>再修改，神奇的事情发生了，where amazing happens！</p>
+</blockquote>
+</li>
+<li><code>ctrl+f</code>&amp;<code>ctrl+shift+f</code><blockquote>
+<p><code>ctrl+f</code>查找就不多说了，<code>ctrl+shift+f</code>是全项目查找</p>
+</blockquote>
+</li>
+</ul>
+<p>待更新···</p>
+</div></article></div></section><footer><div class="paginator"><a href="/2015/11/18/前端学习路线/" class="prev">上一篇</a><a href="/2015/11/08/开始试用hexo/" class="next">下一篇</a></div><div data-thread-key="2015/11/15/jc-sublimetext3/" data-title="Sublime-Text3" data-url="http://yoursite.com/2015/11/15/jc-sublimetext3/" data-author-key="1" class="ds-thread"></div><script>var duoshuoQuery = {short_name:"hbqi"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+
+</script></footer><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create',"UA-65933410-1",'auto');ga('send','pageview');</script><script>var _hmt = _hmt || [];(function() {var hm = document.createElement("script");hm.src = "//hm.baidu.com/hm.js?a36e15d9e2adec9a21fcdd9f686b1ed2";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s);})();</script><script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script></body></html>
